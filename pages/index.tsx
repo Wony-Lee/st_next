@@ -1,9 +1,9 @@
 import Banner from "@/components/Banner";
 import Menu from "@/components/Menu";
-import LectureList from "@/components/LectureList";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import LectureGroup from "@/components/lecture/LectureGroup";
 
 export default function Home() {
     return (
@@ -18,7 +18,7 @@ export default function Home() {
             </Head>
             <Menu />
             <Banner />
-            <LectureList />
+            <LectureGroup />
 
             <footer className={styles.footer}>
                 <a

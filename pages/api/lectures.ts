@@ -31,6 +31,26 @@ const lectureData = {
             isHot: true,
             isNew: true,
         },
+        {
+            id: 1,
+            category: mockCategory,
+            title: "개발/운영/아키텍트를 아우르는 AWS/DevOps",
+            tags: tags,
+            description: "개발/운영/아키텍트를 아우르는 AWS/DevOps",
+            thumb: "/thumb.jpg",
+            isHot: true,
+            isNew: true,
+        },
+        {
+            id: 2,
+            category: mockCategory,
+            title: "개발/운영/아키텍트를 아우르는 AWS/DevOps",
+            tags: tags,
+            description: "개발/운영/아키텍트를 아우르는 AWS/DevOps",
+            thumb: "/thumb.jpg",
+            isHot: true,
+            isNew: true,
+        },
     ],
 };
 

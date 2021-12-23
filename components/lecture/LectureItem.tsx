@@ -1,14 +1,18 @@
 import React from "react";
+import { Lecture } from "interface/lecture";
+import TagList from "../tags/tagList";
 
-interface Props {}
+interface Props {
+    lecture: Lecture;
+}
 
-const LectureItem = (props: Props) => {
+const LectureItem = ({ lecture }: Props) => {
     return (
         <div>
-            <img src="" alt="베스트 강의" />
-            <h3>Test</h3>
-            <p>평생소장</p>
-            <p>개발/운영/아키텍트를 아우르는 AWS/DevOps</p>
+            <img src={lecture.thumb} alt="베스트 강의" />
+            <TagList tagListData={lecture.tags} />
+            <h3>{lecture.title}</h3>
+            <p>{lecture.description}</p>
         </div>
     );
 };
