@@ -54,10 +54,50 @@ const lectureData = {
     ],
 };
 
+const dataScience = {
+    lectureList: [
+        {
+            id: 0,
+            category: mockCategory,
+            title: "DATA 개발/운영/아키텍트를 아우르는 AWS/DevOps",
+            tags: tags,
+            description: "개발/운영/아키텍트를 아우르는 AWS/DevOps",
+            thumb: "/thumb.jpg",
+            isHot: true,
+            isNew: true,
+        },
+        {
+            id: 1,
+            category: mockCategory,
+            title: "개발/운영/아키텍트를 아우르는 AWS/DevOps",
+            tags: tags,
+            description: "개발/운영/아키텍트를 아우르는 AWS/DevOps",
+            thumb: "/thumb.jpg",
+            isHot: true,
+            isNew: true,
+        },
+        {
+            id: 2,
+            category: mockCategory,
+            title: "개발/운영/아키텍트를 아우르는 AWS/DevOps",
+            tags: tags,
+            description: "개발/운영/아키텍트를 아우르는 AWS/DevOps",
+            thumb: "/thumb.jpg",
+            isHot: true,
+            isNew: true,
+        },
+    ],
+};
+
 type Data = {
     name: string;
 };
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    res.status(200).json(lectureData);
+    if (req.query.categories === "Programming") {
+        res.status(200).json(lectureData);
+    }
+    if (req.query.categories === "DataScience") {
+        res.status(200).json(dataScience);
+    }
 }

@@ -1,19 +1,11 @@
 import React from "react";
 import LectureItem from "@/components/lecture/LectureItem";
-import { useQuery } from "react-query";
+import useLectures from "../../hooks/useLectures";
 
 interface Props {}
 
 const LectureList = (): JSX.Element => {
-    const { isLoading, data } = useQuery("lecture_list", () => {
-        return fetch("/api/lectures")
-            .then((res) => {
-                return res.json();
-            })
-            .then((res) => {
-                return res;
-            });
-    });
+    const { isLoading, data } = useLectures("DataScience");
     if (isLoading) {
         return `<div>...Looading</div>`;
     }
